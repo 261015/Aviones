@@ -1,0 +1,1034 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+#define TRUE 1
+#define FALSE 0
+
+int main(){
+
+  struct aviones {
+  int opciones;
+  int almacen;
+  int produccion;
+  int administracion;
+  int entradas;
+  int salidas;
+  int reporte;
+  int venta;
+  int compra;
+  }Aviones_CUCEI;
+
+  struct embarque {
+  int ent1;
+  int num1;
+  int num2;
+  int resultado;
+  int telefono;
+  int factura;
+  int unidades;
+  int fecha;
+  }Avion_CUCEI;
+
+    int opciones;
+    int almacen;
+    int produccion;
+    int administracion;
+    int embarque;
+    int entradas;
+    int salidas;
+    int reporte;
+    int venta;
+    int compra;
+    int ent1;
+    int num1;
+    int num2;
+    int resultado;
+    int telefono[10];
+    int factura[10];
+    int unidades;
+    int fecha;
+    int agregar;
+    int quitar;
+    int producto;
+    int f14;
+    int f15;
+    int tiger;
+    int apache;
+    char repetir = TRUE;
+    char enter;
+    char nombre[30];
+    char productos;
+    char lugar[50];
+    char moneda[10];
+    float pago;
+    float cantidad;
+    float iva;
+    float precio;
+    float propina;
+    float subtotal;
+    float total;
+    float total14;
+    float total15;
+    float totalT;
+    float totalA;
+
+    do {
+        system("cls");
+        printf("\nAviones CUCEI\n\n");
+        printf("Ernesto Vladimir Chaho Reynoso\n\n");
+        printf("222361724\n\n");
+        printf("Version 1.0\n\n");
+        printf("\nPresione enter para continuar\n\n");
+        do
+        {
+            enter=getch();
+        }
+        while(enter!=enter);
+        {
+
+        }
+        Menu:
+        system("cls");
+        printf("Bienvenido");
+        printf("\n\nMenu principal\n");
+        printf("1. Almacen\n");
+        printf("2. Produccion\n");
+        printf("3. Administracion\n");
+        printf("0. Salir\n");
+
+        printf("\nIngrese una opcion: ");
+        scanf("%i", &opciones);
+
+        switch (opciones) {
+            case 1:
+               Almacen:
+               system("cls");
+               printf("\n\nMenu de almacen\n");
+               printf("1. Entradas\n");
+               printf("2. Salidas\n");
+               printf("3. Reporte de material\n");
+               printf("4. Embarque\n");
+               printf("0. Regresar\n");
+
+               printf("\nIngrese una opcion: ");
+               scanf("%i",&almacen);
+
+               switch (almacen) {
+                   case 1:
+                       system("cls");
+                       printf("F-14 tomcat entran 15 unidades a la semana\n");
+                       printf("F-15 entran 20 unidades a la semana\n");
+                       printf("Tiger entran 30 unidades a la semana\n");
+                       printf("Helicoptero apache entran 25 unidades a la semana\n");
+
+                       printf("\n\n\nVolver a: ");
+        		       printf("\n1)Menu de almacen \n2)Menu principal\n");
+        		       scanf("%i",&ent1);
+                       if(ent1 == 1){
+                       goto Almacen;
+				       }
+				       if(ent1 == 2){
+					   goto Menu;
+				       }
+        		       break;
+
+                   case 2:
+                       system("cls");
+                       printf("F-14 tomcat salen 12 a la semana\n");
+                       printf("F-15 salen 18 a la semana\n");
+                       printf("Tiger salen 29 a la semana\n");
+                       printf("Helicoptero apache salen 23 a la semana\n");
+
+                       printf("\n\n\nVolver a: ");
+        		       printf("\n1)Menu de almacen \n2)Menu principal\n");
+        		       scanf("%i",&ent1);
+                       if(ent1 == 1){
+                       goto Almacen;
+				       }
+				       if(ent1 == 2){
+					   goto Menu;
+				       }
+        		       break;
+
+                   case 3:
+                       Reporte:
+                       system("cls");
+                       printf("\n\nMenu de reporte de material\n");
+                       printf("1. F-14 tomcat\n");
+                       printf("2. F-15\n");
+                       printf("3. Tiger\n");
+                       printf("4. Helicoptero apache\n");
+
+                       printf("\nIngrese una opcion: ");
+                       scanf("%i",&reporte);
+
+                       switch (reporte) {
+
+                           case 1:
+                               system("cls");
+                               printf("F-14 tomcat\n");
+                               printf("Marca............Revell\n");
+                               printf("Material.........Plastico\n");
+                               printf("Color............Sin pintar\n");
+                               printf("Número del kit...85-5872\n");
+                               printf("Escala............1/48\n");
+                               printf("Dimensiones.......25 x 25 x 25 millimeters\n");
+                               printf("Número de piezas.....................97\n");
+                               printf("Número de piezas en almacen..........1455\n");
+                               printf("Modelo............2021\n");
+                               printf("No incluye pintura y pegamento\n");
+                               printf("Parte más prominente que se dañe.....Alas delanteras\n");
+
+                               printf("\n\n\nVolver a: ");
+        		               printf("\n1)Menu de reporte de material \n2)Menu de almacen \n3)Menu principal\n");
+                               scanf("%i",&ent1);
+                               if(ent1 == 1){
+                               goto Reporte;
+                               }
+                               if(ent1 == 2){
+                               goto Almacen;
+                               }
+                               if(ent1 == 3){
+                               goto Menu;
+                               }
+                               break;
+
+                           case 2:
+                               system("cls");
+                               printf("F-15\n");
+                               printf("Marca............Revell\n");
+                               printf("Material.........Plastico\n");
+                               printf("Color............Sin pintar\n");
+                               printf("Número del kit...855870\n");
+                               printf("Escala............1/48\n");
+                               printf("Dimensiones:\n");
+                               printf("Longitud..........41 cms\n");
+                               printf("Alas..............27 cms\n");
+                               printf("Número de piezas.....................89\n");
+                               printf("Número de piezas en almacen..........1780\n");
+                               printf("No incluye pintura y pegamento\n");
+                               printf("Parte más prominente que se dañe.....Alas delanteras\n");
+
+                               printf("\n\n\nVolver a: ");
+        		               printf("\n1)Menu de reporte de material \n2)Menu de almacen \n3)Menu principal\n");
+                               scanf("%i",&ent1);
+                               if(ent1 == 1){
+                               goto Reporte;
+                               }
+                               if(ent1 == 2){
+                               goto Almacen;
+                               }
+                               if(ent1 == 3){
+                               goto Menu;
+                               }
+                               break;
+
+                           case 3:
+                               system("cls");
+                               printf("Tiger\n");
+                               printf("Marca............Revell\n");
+                               printf("Material.........Plastico\n");
+                               printf("Color............Camuflaje\n");
+                               printf("Número del kit...85-5209\n");
+                               printf("Escala............1/48\n");
+                               printf("Dimensiones.......30.5 x 20.3 x 5.1 centimeters\n");
+                               printf("Número de piezas.....................60\n");
+                               printf("Número de piezas en almacen..........1800\n");
+                               printf("Modelo............2015\n");
+                               printf("No incluye pintura y pegamento\n");
+                               printf("Parte más prominente que se dañe.....Alas delanteras\n");
+
+                               printf("\n\n\nVolver a: ");
+        		               printf("\n1)Menu de reporte de material \n2)Menu de almacen \n3)Menu principal\n");
+                               scanf("%i",&ent1);
+                               if(ent1 == 1){
+                               goto Reporte;
+                               }
+                               if(ent1 == 2){
+                               goto Almacen;
+                               }
+                               if(ent1 == 3){
+                               goto Menu;
+                               }
+                               break;
+
+                          case 4:
+                               system("cls");
+                               printf("Helicoptero apache\n");
+                               printf("Marca............Revell\n");
+                               printf("Material.........Plastico\n");
+                               printf("Color............Sin pintar\n");
+                               printf("Número del kit...RG-4985\n");
+                               printf("Escala............1/100\n");
+                               printf("Dimensiones.......24.13 x 15.88 x 3.81 centimeters\n");
+                               printf("Número de piezas.....................56\n");
+                               printf("Número de piezas en almacen..........1400\n");
+                               printf("Modelo............2017\n");
+                               printf("No incluye pintura y pegamento\n");
+                               printf("Parte más prominente que se dañe.....Hélices\n");
+
+                               printf("\n\n\nVolver a: ");
+        		               printf("\n1)Menu de reporte de material \n2)Menu de almacen \n3)Menu principal\n");
+                               scanf("%i",&ent1);
+                               if(ent1 == 1){
+                               goto Reporte;
+                               }
+                               if(ent1 == 2){
+                               goto Almacen;
+                               }
+                               if(ent1 == 3){
+                               goto Menu;
+                               }
+                               break;
+                       }
+
+                   case 4:
+                        system("cls");
+                        printf("\nNombre del comprador: ");
+                        scanf("%s",&nombre);
+                        printf("Telefono: ");
+                        scanf("%s",&telefono);
+                        printf("Numero de factura : ");
+                        scanf("%s",&factura);
+                        printf("Producto(s) a vender: ");
+                        scanf("%s",&productos);
+                        printf("Unidad(es): ");
+                        scanf("%s",&unidades);
+                        printf("Lugar de envio: ");
+                        scanf("%s",&lugar);
+                        printf("Fecha de entrega: ");
+                        scanf("%s",&fecha);
+                        printf("Pago total: ");
+                        scanf("%s",&pago);
+                        system("cls");
+                        printf("\nEl reporte se realizara en breve.....\n\n");
+                        printf("\nReporte hecho"),
+                        printf("\nPresiona enter para continuar.... ");
+                        do{
+                        enter=getch();
+                        }
+                        while(enter!=enter);{
+                        }
+                        system("cls");
+                        printf("\nFactura\n");
+                        printf("\nNombre del comprador: %s",&nombre);
+                        printf("\nTelefono: %s",&telefono);
+                        printf("\nNumero de factura : %s",&factura);
+                        printf("\nProducto(s) a vender: %s",&productos);
+                        printf("\nUnidad(es): %s",&unidades);
+                        printf("\nLugar de envio: %s",&lugar);
+                        printf("\nFecha de entrega: %s",&fecha);
+                        printf("\nPago total: %s",&pago);
+
+                        printf("\n\n\nVolver a: ");
+                        printf("\n1)Menu de almacen \n2)Menu principal\n");
+                        scanf("%i",&ent1);
+                        if(ent1 == 1){
+                        goto Almacen;
+                        }
+                        if(ent1 == 2){
+                        goto Menu;
+                        }
+                        break;
+
+                    case 0:
+                        system("cls");
+                        printf("\n\n\n¿Seguro/a que quiere volver al menu principal?: ");
+                        printf("\n1)Si \n2)No\n");
+                        scanf("%i",&ent1);
+                        if(ent1 == 1){
+                        goto Menu;
+                        }
+                        if(ent1 == 2){
+                        goto Almacen;
+                        }
+                        break;
+
+                       }return 0;
+
+
+
+
+             case 2:
+               Produccion:
+               system("cls");
+               printf("\n\nMenu de produccion\n");
+               printf("1. Agregar producto\n");
+               printf("2. Quitar producto\n");
+               printf("0. Regresar\n");
+
+               printf("\nIngrese una opcion: ");
+               scanf("%d", &produccion);
+
+               switch (produccion) {
+                   case 1:
+                     Agregar:
+                        system("cls");
+                        printf("\n\nMenu de agregar producto\n");
+                        printf("1. F-14 tomcat\n");
+                        printf("2. F-15\n");
+                        printf("3. Tiger\n");
+                        printf("4. Helicoptero apache\n");
+
+                        printf("\nEscoja un producto: ");
+                        scanf("%i",&agregar);
+
+                        switch (agregar) {
+                            case 1:
+                                system("cls");
+                                printf("\Introdusca las unidades que se tiene del producto:\n\n");
+                                scanf("%i",&num1);
+                                printf("\Introdusca cuanto se le quiere agregar:\n\n");
+                                scanf("%i",&num2);
+                                resultado = num1 + num2;
+                                printf("La cantidad total de unidades es:%i\n",resultado);
+
+                                printf("\n\n\nVolver a: ");
+                                printf("\nSeleccione la opcion: \n1)Menu de agregar \n2)Menu de produccion \n3)Menu principal\n");
+                                scanf("%i",&ent1);
+                                if(ent1 == 1){
+                                goto Agregar;
+                                }
+                                if(ent1 == 2){
+                                goto Produccion;
+                                }
+                                if(ent1 == 3){
+                                goto Menu;
+                                }
+                                break;
+
+                            case 2:
+                                system("cls");
+                                printf("\Introdusca las unidades que se tiene del producto:\n\n");
+                                scanf("%i",&num1);
+                                printf("\Introdusca cuanto se le quiere agregar:\n\n");
+                                scanf("%i",&num2);
+                                resultado = num1 + num2;
+                                printf("La cantidad total de unidades es:%i\n",resultado);
+
+                                printf("\n\n\nVolver a: ");
+                                printf("\nSeleccione la opcion: \n1)Menu de agregar \n2)Menu de produccion \n3)Menu principal\n");
+                                scanf("%i",&ent1);
+                                if(ent1 == 1){
+                                goto Agregar;
+                                }
+                                if(ent1 == 2){
+                                goto Produccion;
+                                }
+                                if(ent1 == 3){
+                                goto Menu;
+                                }
+                                break;
+
+                            case 3:
+                                system("cls");
+                                printf("\Introdusca las unidades que se tiene del producto:\n\n");
+                                scanf("%i",&num1);
+                                printf("\Introdusca cuanto se le quiere agregar:\n\n");
+                                scanf("%i",&num2);
+                                resultado = num1 + num2;
+                                printf("La cantidad total de unidades es:%i\n",resultado);
+
+                                printf("\n\n\nVolver a: ");
+                                printf("\nSeleccione la opcion: \n1)Menu de agregar \n2)Menu de produccion \n3)Menu principal\n");
+                                scanf("%i",&ent1);
+                                if(ent1 == 1){
+                                goto Agregar;
+                                }
+                                if(ent1 == 2){
+                                goto Produccion;
+                                }
+                                if(ent1 == 3){
+                                goto Menu;
+                                }
+                                break;
+
+                            case 4:
+                                system("cls");
+                                printf("\Introdusca las unidades que se tiene del producto:\n\n");
+                                scanf("%i",&num1);
+                                printf("\Introdusca cuanto se le quiere agregar:\n\n");
+                                scanf("%i",&num2);
+                                resultado = num1 + num2;
+                                printf("La cantidad total de unidades es:%i\n",resultado);
+
+                                printf("\n\n\nVolver a: ");
+                                printf("\nSeleccione la opcion: \n1)Menu de agregar \n2)Menu de produccion \n3)Menu principal\n");
+                                scanf("%i",&ent1);
+                                if(ent1 == 1){
+                                goto Agregar;
+                                }
+                                if(ent1 == 2){
+                                goto Produccion;
+                                }
+                                if(ent1 == 3){
+                                goto Menu;
+                                }
+                                break;
+
+                                }
+
+
+                   case 2:
+                     Quitar:
+                        system("cls");
+                        printf("\n\nMenu de quitar producto\n");
+                        printf("1. F-14 tomcat\n");
+                        printf("2. F-15\n");
+                        printf("3. Tiger\n");
+                        printf("4. Helicoptero apache\n");
+
+                        printf("\nEscoja un producto: ");
+                        scanf("%i",&quitar);
+
+                        switch (quitar) {
+                            case 1:
+                                system("cls");
+                                printf("\Introdusca las unidades que se tiene del producto:\n\n");
+                                scanf("%i",&num1);
+                                printf("\Introdusca cuanto se le quiere quitar:\n\n");
+                                scanf("%i",&num2);
+                                resultado = num1 - num2;
+                                printf("La cantidad total de unidades es:%i\n",resultado);
+
+                                printf("\n\n\nVolver a: ");
+                                printf("\nSeleccione la opcion: \n1)Menu de quitar \n2)Menu de produccion \n3)Menu principal\n");
+                                scanf("%i",&ent1);
+                                if(ent1 == 1){
+                                goto Quitar;
+                                }
+                                if(ent1 == 2){
+                                goto Produccion;
+                                }
+                                if(ent1 == 3){
+                                goto Menu;
+                                }
+                                break;
+
+                            case 2:
+                                system("cls");
+                                printf("\Introdusca las unidades que se tiene del producto:\n\n");
+                                scanf("%i",&num1);
+                                printf("\Introdusca cuanto se le quiere quitar:\n\n");
+                                scanf("%i",&num2);
+                                resultado = num1 - num2;
+                                printf("La cantidad total de unidades es:%i\n",resultado);
+
+                                printf("\n\n\nVolver a: ");
+                                printf("\nSeleccione la opcion: \n1)Menu de quitar \n2)Menu de produccion \n3)Menu principal\n");
+                                scanf("%i",&ent1);
+                                if(ent1 == 1){
+                                goto Quitar;
+                                }
+                                if(ent1 == 2){
+                                goto Produccion;
+                                }
+                                if(ent1 == 3){
+                                goto Menu;
+                                }
+                                break;
+
+                            case 3:
+                                system("cls");
+                                printf("\Introdusca las unidades que se tiene del producto:\n\n");
+                                scanf("%i",&num1);
+                                printf("\Introdusca cuanto se le quiere quitar:\n\n");
+                                scanf("%i",&num2);
+                                resultado = num1 - num2;
+                                printf("La cantidad total de unidades es:%i\n",resultado);
+
+                                printf("\n\n\nVolver a: ");
+                                printf("\nSeleccione la opcion: \n1)Menu de quitar \n2)Menu de produccion \n3)Menu principal\n");
+                                scanf("%i",&ent1);
+                                if(ent1 == 1){
+                                goto Quitar;
+                                }
+                                if(ent1 == 2){
+                                goto Produccion;
+                                }
+                                if(ent1 == 3){
+                                goto Menu;
+                                }
+                                break;
+
+                            case 4:
+                                system("cls");
+                                printf("\Introdusca las unidades que se tiene del producto:\n\n");
+                                scanf("%i",&num1);
+                                printf("\Introdusca cuanto se le quiere quitar:\n\n");
+                                scanf("%i",&num2);
+                                resultado = num1 - num2;
+                                printf("La cantidad total de unidades es:%i\n",resultado);
+
+                                printf("\n\n\nVolver a: ");
+                                printf("\nSeleccione la opcion: \n1)Menu de quitar \n2)Menu de produccion \n3)Menu principal\n");
+                                scanf("%i",&ent1);
+                                if(ent1 == 1){
+                                goto Quitar;
+                                }
+                                if(ent1 == 2){
+                                goto Produccion;
+                                }
+                                if(ent1 == 3){
+                                goto Menu;
+                                }
+                                break;
+                        }
+
+                      case 0:
+                        system("cls");
+                        printf("\n\n\n¿Seguro/a que quiere volver al menu principal?: ");
+                        printf("\n1)Si \n2)No\n");
+                        scanf("%i",&ent1);
+                        if(ent1 == 1){
+                        goto Menu;
+                        }
+                        if(ent1 == 2){
+                        goto Produccion;
+                        }
+                        break;
+
+               }return 0;
+
+             case 3:
+               Administracion:
+               system("cls");
+               printf("\n\nMenu de administracion\n");
+               printf("1. Venta\n");
+               printf("2. Compra\n");
+               printf("3. Ganancias\n");
+               printf("4. Perdidas\n");
+               printf("5. Balance\n");
+               printf("0. Regresar\n");
+
+               printf("\nIngrese una opcion: ");
+               scanf("%d", &administracion);
+
+               switch (administracion) {
+                   case 1:
+                     Venta:
+                        system("cls");
+                        printf("\n\nMenu de venta\n");
+                        printf("1. Mayoreo\n");
+                        printf("2. Menudeo\n");
+
+                        printf("\nEscoja una opcion: ");
+                        scanf("%i",&venta);
+
+                        switch (venta) {
+
+                            case 1:
+                                MayoreoV:
+                                    system("cls");
+                                    printf("Ingresa el valor de cantidad: ");
+                                    scanf("%f", &cantidad);
+                                    (void) getchar ();
+                                    printf("Selecciona un producto.\n");
+                                    printf("\t1. F-14 tomcat $25,360.00\n");
+                                    printf("\t2. F-15 $21,060.00\n");
+                                    printf("\t3. Tiger $13,120.00\n");
+                                    printf("\t4. Helicoptero apache $12,700.00\n");
+                                    printf("\t: ");
+                                    do {
+                                        scanf ("%d", &producto);
+                                        (void) getchar ();
+                                        if (producto<1||producto>4)
+                                        printf ("Valor incorrecto. Ingresalo nuevamente.: ");
+                                    } while (producto<1||producto>4);
+                                    precio=0;
+                                    if(producto==1)
+                                        precio=25360;
+                                    if(producto==2)
+                                        precio=21060;
+                                    if(producto==3)
+                                        precio=13120;
+                                    if(producto==4)
+                                        precio=12700;
+                                    subtotal=precio*cantidad;
+                                    iva=subtotal*0.16;
+                                    total=subtotal+iva;
+                                    printf("\nNombre del comprador: ");
+                                    scanf("%s",&nombre);
+                                    printf("Telefono: ");
+                                    scanf("%s",&telefono);
+                                    printf("Numero de factura : ");
+                                    scanf("%s",&factura);
+                                    printf("Lugar de envio: ");
+                                    scanf("%s",&lugar);
+                                    printf("Fecha de entrega: ");
+                                    scanf("%s",&fecha);
+                                    printf("Moneda usada: ");
+                                    scanf("%s",&moneda);
+                                    system("cls");
+                                    printf("\nOreden de pago\n");
+                                    printf("\nNombre del comprador: %s",&nombre);
+                                    printf("\nTelefono: %s",&telefono);
+                                    printf("\nNumero de factura : %s",&factura);
+                                    printf("\nLugar de envio: %s",&lugar);
+                                    printf("\nFecha de entrega: %s",&fecha);
+                                    printf("\nMoneda usada: %s\n",&moneda);
+                                    printf ("Valor de iva: %g\n", iva);
+                                    printf ("Valor de precio: %g\n", precio);
+                                    printf ("Valor de subtotal: %g\n", subtotal);
+                                    printf ("Valor de total: %g\n", total);
+                                    putchar ('\n');
+
+                                    printf("\n\n\nVolver a: ");
+                                    printf("\nSeleccione la opcion: \n1)Menu de mayoreo \n2)Menu de compra \n3)Menu de administracion \n4)Menu principal\n");
+                                    scanf("%i",&ent1);
+                                    if(ent1 == 1){
+                                    goto MayoreoV;
+                                    }
+                                    if(ent1 == 2){
+                                    goto Compra;
+                                    }
+                                    if(ent1 == 3){
+                                    goto Administracion;
+                                    }
+                                    if(ent1 == 4){
+                                    goto Menu;
+                                    }
+                                    break;
+
+                            case 2:
+                                MenudeoV:
+                                    system("cls");
+                                    printf("Ingresa el valor de cantidad: ");
+                                    scanf("%f", &cantidad);
+                                    (void) getchar ();
+                                    printf("Selecciona un producto.\n");
+                                    printf("1. F-14 tomcat $1,418.00\n");
+                                    printf("2. F-15 $1,203.00\n");
+                                    printf("3. Tiger $806.00\n");
+                                    printf("4. Helicoptero apache $2,241.00\n");
+                                    printf("\t: ");
+                                    do {
+                                        scanf ("%d", &producto);
+                                        (void) getchar ();
+                                        if (producto<1||producto>4)
+                                        printf ("Valor incorrecto. Ingresalo nuevamente.: ");
+                                    } while (producto<1||producto>4);
+                                    precio=0;
+                                    if(producto==1)
+                                        precio=1418;
+                                    if(producto==2)
+                                        precio=1203;
+                                    if(producto==3)
+                                        precio=806;
+                                    if(producto==4)
+                                        precio=2241;
+                                    subtotal=precio*cantidad;
+                                    iva=subtotal*0.16;
+                                    total=subtotal+iva;
+                                    printf("\nNombre del comprador: ");
+                                    scanf("%s",&nombre);
+                                    printf("Telefono: ");
+                                    scanf("%s",&telefono);
+                                    printf("Numero de factura : ");
+                                    scanf("%s",&factura);
+                                    printf("Lugar de envio: ");
+                                    scanf("%s",&lugar);
+                                    printf("Fecha de entrega: ");
+                                    scanf("%s",&fecha);
+                                    printf("Moneda usada: ");
+                                    scanf("%s",&moneda);
+                                    system("cls");
+                                    printf("\nOreden de pago\n");
+                                    printf("\nNombre del comprador: %s",&nombre);
+                                    printf("\nTelefono: %s",&telefono);
+                                    printf("\nNumero de factura : %s",&factura);
+                                    printf("\nLugar de envio: %s",&lugar);
+                                    printf("\nFecha de entrega: %s",&fecha);
+                                    printf("\nMoneda usada: %s\n",&moneda);
+                                    printf ("Valor de iva: %g\n", iva);
+                                    printf ("Valor de precio: %g\n", precio);
+                                    printf ("Valor de subtotal: %g\n", subtotal);
+                                    printf ("Valor de total: %g\n", total);
+                                    putchar ('\n');
+
+                                    printf("\n\n\nVolver a: ");
+                                    printf("\nSeleccione la opcion: \n1)Menu de mayoreo \n2)Menu de compra \n3)Menu de administracion \n4)Menu principal\n");
+                                    scanf("%i",&ent1);
+                                    if(ent1 == 1){
+                                    goto MenudeoV;
+                                    }
+                                    if(ent1 == 2){
+                                    goto Compra;
+                                    }
+                                    if(ent1 == 3){
+                                    goto Administracion;
+                                    }
+                                    if(ent1 == 4){
+                                    goto Menu;
+                                    }
+                            }
+
+                   case 2:
+                       Compra:
+                        system("cls");
+                        printf("\n\nMenu de compra\n");
+                        printf("1. Mayoreo\n");
+                        printf("2. Menudeo\n");
+
+                        printf("\nEscoja una opcion: ");
+                        scanf("%i",&compra);
+
+                        switch (compra) {
+
+                            case 1:
+                                MayoreoC:
+                                    system("cls");
+                                    printf("Ingresa el valor de cantidad: ");
+                                    scanf("%f", &cantidad);
+                                    (void) getchar ();
+                                    printf("Selecciona un producto.\n");
+                                    printf("1. F-14 tomcat $25,725.00\n");
+                                    printf("2. F-15 $21,075.00\n");
+                                    printf("3. Tiger $13,125.00\n");
+                                    printf("4. Helicoptero apache $38,115.00\n");
+                                    printf("\t: ");
+                                    do {
+                                        scanf ("%d", &producto);
+                                        (void) getchar ();
+                                        if (producto<1||producto>4)
+                                        printf ("Valor incorrecto. Ingresalo nuevamente.: ");
+                                    } while (producto<1||producto>4);
+                                    precio=0;
+                                    if(producto==1)
+                                        precio=25725;
+                                    if(producto==2)
+                                        precio=21075;
+                                    if(producto==3)
+                                        precio=13125;
+                                    if(producto==4)
+                                        precio=38115;
+                                    subtotal=precio*cantidad;
+                                    iva=subtotal*0.16;
+                                    total=subtotal+iva;
+                                    printf("\nNombre del comprador: ");
+                                    scanf("%s",&nombre);
+                                    printf("Telefono: ");
+                                    scanf("%s",&telefono);
+                                    printf("Numero de factura : ");
+                                    scanf("%s",&factura);
+                                    printf("Lugar de envio: ");
+                                    scanf("%s",&lugar);
+                                    printf("Fecha de entrega: ");
+                                    scanf("%s",&fecha);
+                                    printf("Moneda usada: ");
+                                    scanf("%s",&moneda);
+                                    system("cls");
+                                    printf("\nOreden de pago\n");
+                                    printf("\nNombre del comprador: %s",&nombre);
+                                    printf("\nTelefono: %s",&telefono);
+                                    printf("\nNumero de factura : %s",&factura);
+                                    printf("\nLugar de envio: %s",&lugar);
+                                    printf("\nFecha de entrega: %s",&fecha);
+                                    printf("\nMoneda usada: %s\n",&moneda);
+                                    printf ("Valor de iva: %g\n", iva);
+                                    printf ("Valor de precio: %g\n", precio);
+                                    printf ("Valor de subtotal: %g\n", subtotal);
+                                    printf ("Valor de total: %g\n", total);
+                                    putchar ('\n');
+
+                                    printf("\n\n\nVolver a: ");
+                                    printf("\nSeleccione la opcion: \n1)Menu de mayoreo \n2)Menu de compra \n3)Menu de administracion \n4)Menu principal\n");
+                                    scanf("%i",&ent1);
+                                    if(ent1 == 1){
+                                    goto MayoreoC;
+                                    }
+                                    if(ent1 == 2){
+                                    goto Compra;
+                                    }
+                                    if(ent1 == 3){
+                                    goto Administracion;
+                                    }
+                                    if(ent1 == 4){
+                                    goto Menu;
+                                    }
+                                    break;
+
+                            case 2:
+                                MenudeoC:
+                                    system("cls");
+                                    printf("Ingresa el valor de cantidad: ");
+                                    scanf("%f", &cantidad);
+                                    (void) getchar ();
+                                    printf("Selecciona un producto.\n");
+                                    printf("1. F-14 tomcat $1,715.00\n");
+                                    printf("2. F-15 $1,405.00\n");
+                                    printf("3. Tiger $875.00\n");
+                                    printf("4. Helicoptero apache $2,541.00\n");
+                                    printf("\t: ");
+                                    do {
+                                        scanf ("%d", &producto);
+                                        (void) getchar ();
+                                        if (producto<1||producto>4)
+                                        printf ("Valor incorrecto. Ingresalo nuevamente.: ");
+                                    } while (producto<1||producto>4);
+                                    precio=0;
+                                    if(producto==1)
+                                        precio=1715;
+                                    if(producto==2)
+                                        precio=1405;
+                                    if(producto==3)
+                                        precio=875;
+                                    if(producto==4)
+                                        precio=2541;
+                                    subtotal=precio*cantidad;
+                                    iva=subtotal*0.16;
+                                    total=subtotal+iva;
+                                    printf("\nNombre del comprador: ");
+                                    scanf("%s",&nombre);
+                                    printf("Telefono: ");
+                                    scanf("%s",&telefono);
+                                    printf("Numero de factura : ");
+                                    scanf("%s",&factura);
+                                    printf("Lugar de envio: ");
+                                    scanf("%s",&lugar);
+                                    printf("Fecha de entrega: ");
+                                    scanf("%s",&fecha);
+                                    printf("Moneda usada: ");
+                                    scanf("%s",&moneda);
+                                    system("cls");
+                                    printf("\nOreden de pago\n");
+                                    printf("\nNombre del comprador: %s",&nombre);
+                                    printf("\nTelefono: %s",&telefono);
+                                    printf("\nNumero de factura : %s",&factura);
+                                    printf("\nLugar de envio: %s",&lugar);
+                                    printf("\nFecha de entrega: %s",&fecha);
+                                    printf("\nMoneda usada: %s\n",&moneda);
+                                    printf ("Valor de iva: %g\n", iva);
+                                    printf ("Valor de precio: %g\n", precio);
+                                    printf ("Valor de subtotal: %g\n", subtotal);
+                                    printf ("Valor de total: %g\n", total);
+                                    putchar ('\n');
+
+                                    printf("\n\n\nVolver a: ");
+                                    printf("\nSeleccione la opcion: \n1)Menu de mayoreo \n2)Menu de compra \n3)Menu de administracion \n4)Menu principal\n");
+                                    scanf("%i",&ent1);
+                                    if(ent1 == 1){
+                                    goto MenudeoC;
+                                    }
+                                    if(ent1 == 2){
+                                    goto Compra;
+                                    }
+                                    if(ent1 == 3){
+                                    goto Administracion;
+                                    }
+                                    if(ent1 == 4){
+                                    goto Menu;
+                                    }
+                            }
+
+                   case 3:
+                       system("cls");
+                       printf("Ingrese las unidades vendidas del F-14:");
+                       scanf("%s",&f14);
+                       printf("Ingrese las unidades vendidas del F15:");
+                       scanf("%s",&f15);
+                       printf("Ingrese las unidades vendidas del Tiger:");
+                       scanf("%s",&tiger);
+                       printf("Ingrese las unidades vendidas del Helicoptero apache:");
+                       scanf("%s",&apache);
+                       total14=f14*1715;
+                       total15=f15*1405;
+                       totalT=tiger*875;
+                       totalA=apache*2541;
+                       total=total14+total15+totalT+totalA;
+                       system("cls");
+                       printf("Ganancias totales:%g", total);
+
+                       printf("\n\n\nVolver a: ");
+                       printf("\nSeleccione la opcion: \n1)Menu de administracion \n2)Menu principal\n");
+                       scanf("%i",&ent1);
+                       if(ent1 == 1){
+                       goto Administracion;
+                       }
+                       if(ent1 == 2){
+                       goto Menu;
+                       }
+                       break;
+
+
+                   case 4:
+                       system("cls");
+                       printf("Ingrese las unidades fabricadas del F-14 tomcat:");
+                       scanf("%s",&f14);
+                       printf("Ingrese las unidades fabricadas del F-15:");
+                       scanf("%s",&f15);
+                       printf("Ingrese las unidades fabricadas del Tiger:");
+                       scanf("%s",&tiger);
+                       printf("Ingrese las unidades fabricadas del Helicoptero apache:");
+                       scanf("%s",&apache);
+                       total14=f14*1418;
+                       total15=f15*1203;
+                       totalT=tiger*806;
+                       totalA=apache*2241;
+                       total=total14+total15+totalT+totalA;
+                       system("cls");
+                       printf("Perdidas totales:%g", total);
+
+                       printf("\n\n\nVolver a: ");
+                       printf("\nSeleccione la opcion: \n1)Menu de administracion \n2)Menu principal\n");
+                       scanf("%i",&ent1);
+                       if(ent1 == 1){
+                       goto Administracion;
+                       }
+                       if(ent1 == 2){
+                       goto Menu;
+                       }
+                       break;
+
+                   case 5:
+                     system("cls");
+                     printf("Ingrese las ganancias:\n");
+		             scanf("%d",&num1);
+		             printf("Ingrese las perdidas:\n");
+		             scanf("%d",&num2);
+                     resultado = num1 - num2;
+                     system("cls");
+	                 printf("El resultado del balance es:%d",resultado);
+	                 if (resultado > 0)
+                        printf("\nEl balance es positivo");
+                     if (resultado < 0)
+                        printf("\nEl balance es negativo");
+
+                     printf("\n\n\nVolver a: ");
+                     printf("\nSeleccione la opcion: \n1)Menu de administracion \n2)Menu principal\n");
+                     scanf("%i",&ent1);
+                     if(ent1 == 1){
+                     goto Administracion;
+                     }
+                     if(ent1 == 2){
+                     goto Menu;
+                     }
+                     break;
+
+                   case 0:
+                        system("cls");
+                        printf("\n\n\n¿Seguro/a que quiere volver al menu principal?: ");
+                        printf("\n1)Si \n2)No\n");
+                        scanf("%i",&ent1);
+                        if(ent1 == 1){
+                        goto Menu;
+                        }
+                        if(ent1 == 2){
+                        goto Administracion;
+                        }
+                        break;
+
+
+
+                  }return 0;
+
+            case 0:
+                repetir = FALSE;
+                system("cls");
+                printf("Usted ha salido del menu, que tenga un buen dia.");
+                break;
+
+                  }
+        }while (repetir);
+return 0;
+}
